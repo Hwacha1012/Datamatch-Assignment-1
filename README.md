@@ -26,4 +26,4 @@ Add a visualization to page through D3! This can just be below your short bio. (
 The instructions for this part are in the js/main.js file. The result should be a graph of a bunch of different circles representing the school signups.
 
 ## Part 3 - Turning in the assignment using Git (By Week 3 meeting)
-To turn this assignment in, please use Github. Git is the industry standard for version control ad is super helpful to learn! You [can follow this guide here to create a new repository](https://guides.github.com/activities/hello-world/). Commit and push your website up to your Github account. Turn your assignment in by emailing me the link to your repository and a link to your bad visualization before our meeting at 7 PM on Thursday!
+To turn this assignment in, please use Github. Git is the industry standard for version control ad is super helpful to learn! You [can follow this guide here to create a new repository](https://guides.github.com/activities/hello-world/). Commit and push your website up to your Github account and email us the link!
