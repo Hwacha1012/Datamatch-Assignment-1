@@ -74,11 +74,10 @@ var schools = [
 
 
 
-// Step 7: Add labels with the names of the European schools
+// Step 7: Add labels with the names of the schools
 //   - Use the SVG text element
 //   - All the elements should be the class of school-label
-//   - The labels should only be visible for schools with population greater
-//   signups more than 500
+//   - The labels should only be visible for schools with signups greater than 500
 
 
 
@@ -87,5 +86,5 @@ var schools = [
 //   text anchor = middle
 
 
-// Optional bonus step: add tooltips displaying the country for each city
+// Optional bonus step: add tooltips displaying the country for each school
 // https://bl.ocks.org/d3noob/257c360b3650b9f0a52dd8257d7a2d73
