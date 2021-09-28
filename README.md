@@ -4,12 +4,12 @@
 Apply for a [Jetbrains student license](https://www.jetbrains.com/student/) if you haven't yet, and download [Webstorm](https://www.jetbrains.com/webstorm/). We highly encourage you to use this IDE.
 
 ## Part 1 - HTML basics (Week 1) 
-Clone this repository using [this guide](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository). Notice the three subfolers: `css`, `img`, and `js`, for your CSS files, images, and Javascript files respectively, and the html file `index.html` in the main folder (the `data` folder will be used in Part 2). 
+Clone this repository using [this guide](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository). Notice the subfolers: `img` and `js`, for your images, and Javascript files respectively, and the html file `index.html` in the main folder (the `data` folder will be used in Part 2). You will need to create a `css` subfolder to store your `.css` file in for this part of the assignment.
 
 Using HTML and CSS, modify the files and create a personal website to introduce yourself. It can be as simple or as complicated as you want, it just needs to include your name, a short biography of yourself, a profile picture, and a couple of links to other profiles of yourself. (Feel free to add more features, like more images/a slideshow, a background image, other pages, etc.) Use at least 3 CSS selectors and 6 properties to style your webpage. Some ideas include:
-- Changing the font! Check out Google Fonts for this. You will have to link the font in your header.
-- Adding icons and styling them. Consider Font Awesome.
-- Making the layout of your website responsive. Consider Bootstrap.
+- Changing the font! Check out [Google Fonts](https://fonts.google.com/) for this. You will have to link the font in your header.
+- Adding icons and styling them. Consider [Font Awesome](https://fontawesome.com/).
+- Making the layout of your website responsive. Consider [Bootstrap](https://getbootstrap.com/).
 
 Make sure you don't delete the following lines in the `index.html`! They will be used in the next part of the assignment.
 
@@ -26,4 +26,4 @@ Add a visualization to page through D3! This can just be below your short bio. (
 The instructions for this part are in the js/main.js file. The result should be a graph of a bunch of different circles representing the school signups.
 
 ## Part 3 - Turning in the assignment using Git (By Week 3 meeting)
-To turn this assignment in, please use Github. Git is the industry standard for version control ad is super helpful to learn! You [can follow this guide here to create a new repository](https://guides.github.com/activities/hello-world/). Commit and push your website up to your Github account and email us the link!
+To turn this assignment in, please use Github and create a new repository. Git is the industry standard for version control ad is super helpful to learn! You [can follow this guide here to create a new repository](https://guides.github.com/activities/hello-world/). Commit and push your website up to your Github account and email us the link!
