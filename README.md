@@ -23,7 +23,7 @@ Here's a [screenshot preview](https://github.com/avcheng/dmstats22-assignment-1/
 ## Part 2 - D3 static visualization (Week 2)
 Add a visualization to page through D3! This can just be below your short bio. (If you're feeling adventerous, try having this show up on a different "tab" on the website). 
 
-The instructions for this part are in the js/main.js file. The result should be a graph of a bunch of different circles representing the school signups.
+The instructions for this part are in the `js/main.js` file. The result should be a graph of a bunch of different circles representing the school signups.
 
 ## Part 3 - Turning in the assignment using Git (By Week 3 meeting)
 To turn this assignment in, please use Github and create a new repository. Git is the industry standard for version control ad is super helpful to learn! You [can follow this guide here to create a new repository](https://guides.github.com/activities/hello-world/). Commit and push your website up to your Github account and email us the link!
