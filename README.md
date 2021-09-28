@@ -4,14 +4,14 @@
 Apply for a [Jetbrains student license](https://www.jetbrains.com/student/) if you haven't yet, and download [Webstorm](https://www.jetbrains.com/webstorm/). We highly encourage you to use this IDE.
 
 ## Part 1 - HTML basics (Week 1) 
-Clone this repository using [this guide](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository). Notice the subfoler `js`, Javascript files and the html file `index.html` in the main folder (the `data` folder will be used in Part 2). You will need to create a `css` subfolder to store your `.css` file and `img` subfolder to store the images you want to show in your website for this part of the assignment.
+Clone this repository using [this guide](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository). Notice the html file `index.html` in the main folder, which is where the actual HTML content of our website will be held. (the subfoler `js` is where we store our Javascript files and the `data` folder will be used in Part 2). You will need to create a `css` subfolder to store your `.css` file and `img` subfolder to store the images you want to show in your website for this part of the assignment.
 
 Using HTML and CSS, modify the files and create a personal website to introduce yourself. It can be as simple or as complicated as you want, it just needs to include your name, a short biography of yourself, a profile picture, and a couple of links to other profiles of yourself. (Feel free to add more features, like more images/a slideshow, a background image, other pages, etc.) Use at least 3 CSS selectors and 6 properties to style your webpage. Some ideas include:
 - Changing the font! Check out [Google Fonts](https://fonts.google.com/) for this. You will have to link the font in your header.
 - Adding icons and styling them. Consider [Font Awesome](https://fontawesome.com/).
 - Making the layout of your website responsive. Consider [Bootstrap](https://getbootstrap.com/).
 
-Make sure you don't delete the following lines in the `index.html`! They will be used in the next part of the assignment.
+Make sure you don't delete the following lines in the `index.html`! They will be used in the next part of the assignment and link `d3` and our `js` files to our html files.
 
 ```
 <script src="js/d3.min.js"></script>
