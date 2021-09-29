@@ -14,7 +14,7 @@ Using HTML and CSS, modify the files and create a personal website to introduce 
 Make sure you don't delete the following lines in the `index.html`! They will be used in the next part of the assignment and link `d3` and our `js` files to our html files.
 
 ```
-<script src="js/d3.min.js"></script>
+<script src="js/d3.v7.min.js"></script>
 <script src="js/main.js"></script>
 ```
 
