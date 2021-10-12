@@ -2,15 +2,19 @@
 
 // Step 1: Select the body of the HTML document and append an h2 element
 // with the text "Starting Part 2! We're Learning D3"
-
-
+d3.select("body")
+    .append("h2")
+    .text("Starting Part 2! We're Learning D3");
 // Step 2: Select the body again and append a div with the id dynamic-content
-
-
+d3.select("body")
+    .append("div")
+    .attr("id", "dynamic-content");
 
 // Step 3: Select the div you just created (using its id!) and append a
 // paragraph with some text of your choice (you can also style this if you want!)
-
+d3.select("#dynamic-content")
+    .append("p")
+    .text("Successfully appended");
 
 
 // PART II: Binding data
@@ -26,10 +30,16 @@ var schools = [
 
 // Step 1: Append a new SVG element to HTML document with D3
 // (width = 500px, height = 500px)
-
+d3.select("body")
+    .append("svg")
+    .attr("width", 500)
+    .attr("height", 500);
 
 // Step 2: Append a new SVG circle for every object in the schools array
-
+d3.select("svg").selectAll("circle")
+    .data(schools)
+    .enter()
+    .append("circle");
 
 
 // Step 3: Define the following dynamic properties for each circle:
@@ -37,7 +47,34 @@ var schools = [
 //   - Radius: schools with over 3500 signups should be twice as big as schools with less than 2500 signups
 //   - Colors: use a different color for each region
 //   - Border: add a border to every circle (SVG property: stroke)
-
+d3.select("svg").selectAll("circle")
+    .data(schools)
+   // .enter()
+    .attr("cx", function(d, index){
+        return (40+index*80)
+    })
+    .attr("cy", 200)
+    .attr("r", function(d){
+        if(d.signups > 3500){
+            return (40)
+        }
+        else if(d.signups < 2500){
+            return(20)
+        }
+        else{
+            return(30)
+        }
+    })
+    .attr("fill", function(d){
+        if(d.region=="Northeast")
+            return("red")
+        else if(d.region=="Midwest")
+            return("blue")
+        else{
+            return("green")
+        }
+    })
+    .attr("stroke", "black");
 
 
 // PART III: Loading data
