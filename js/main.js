@@ -1,5 +1,4 @@
 // PART 2 of the Assingment, make sure you've done PART 1 first!
-
 // Step 1: Select the body of the HTML document and append an h2 element
 // with the text "Starting Part 2! We're Learning D3"
 d3.select("body")
@@ -82,41 +81,89 @@ d3.select("svg").selectAll("circle")
 // Step 1: Use D3 to load the CSV file "schools.csv". then, print the data
 // to the console and inspect it in your browser
 
-
-// Step 2: Filter the dataset: Filter the dataset to only include schools that are
+//I moved all the steps into the d3.csv statement below;
+//for some reason, filteredData is undefined in later code statements, despite being a global variable
+var filteredData;
+d3.csv("/data/schools.csv").then(function(data){
+    data.forEach(function(d){
+        d.signups = +d.signups;
+        d.x = +d.x;
+        d.y = +d.y;
+    });
+    console.log(data)
+    // Step 2: Filter the dataset: Filter the dataset to only include schools that are
 // part of the Datamatch Schools (using the datamatchSchool variable).
+     filteredData = data.filter(function(row) {
+        // only look at delicious foods!
+        return row.signups > 0;
+    })
+    console.log(filteredData)
+    // Step 3: Append a new paragraph to your HTML document that shows the
+    // number of Datamatch schools
+    d3.select("body").append("p").text(filteredData.length);
+    // Step 4: Prepare the data - each value of the CSV file is stored as a string,
+    // but we want numerical values to be numbers.
+    //already done when schools.csv is parsed
+
+
+    // Step 5: Draw an SVG circle for each school in the filtered dataset
+    //   - All the elements (drawing area + circles) should be added dynamically with D3
+    //   - SVG container: width = 700px, height = 550px
+    //   - Use the randomly generated x/y coordinates for each school from the dataset to position the circles
+    d3.select("body")
+        .append("svg")
+        .attr("id", "svgCircles")
+        .attr("width", 700)
+        .attr("height", 550);
+
+    d3.select("#svgCircles").selectAll("circle")
+        .data(filteredData)
+        .enter()
+        .append("circle")
+        .attr("fill", "green")
+        .attr("cx", function (d){
+            return d.x
+        })
+        .attr("cy", function (d){
+            return d.y
+        })
+        // Step 6: Change the radius of the circle to be data-dependent
+        //   - The radius should be 5px for schools with signups less than 500
+        //   - The radius for all other schools should be 10px
+        .attr("r", function(d){
+             if(d.signups < 500){
+               return (5)
+             }
+             else{
+                 return(10)
+             }
+        });
+
+    // Step 7: Add labels with the names of the schools
+    //   - Use the SVG text element
+    //   - All the elements should be the class of school-label
+    //   - The labels should only be visible for schools with signups greater than 500
+
+    d3.select("#svgCircles").selectAll("text")
+        .data(filteredData)
+        .enter()
+        .append("text")
+        .attr("id", "school-label")
+        .attr("x", function(d){
+            return(d.x)
+        })
+        .attr("y", function(d){
+            return(d.y)
+        })
+        .text(function(d){
+            if (d.signups > 500){
+                return(d.school)
+            }
+        })
 
 
 
-
-// Step 3: Append a new paragraph to your HTML document that shows the
-// number of Datamatch schools
-
-
-// Step 4: Prepare the data - each value of the CSV file is stored as a string,
-// but we want numerical values to be numbers.
-
-
-
-// Step 5: Draw an SVG circle for each school in the filtered dataset
-//   - All the elements (drawing area + circles) should be added dynamically with D3
-//   - SVG container: width = 700px, height = 550px
-//   - Use the randomly generated x/y coordinates for each school from the dataset to position the circles
-
-
-
-// Step 6: Change the radius of the circle to be data-dependent
-//   - The radius should be 5px for schools with signups less than 500
-//   - The radius for all other schools should be 10px
-
-
-
-// Step 7: Add labels with the names of the schools
-//   - Use the SVG text element
-//   - All the elements should be the class of school-label
-//   - The labels should only be visible for schools with signups greater than 500
-
-
+});
 
 // Step 8: Styling - in the external stylesheet, do some styling
 //   - Make sure to at least style school-label with font size = 11 px and
